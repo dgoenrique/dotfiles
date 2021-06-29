@@ -78,7 +78,7 @@ if [ -x /usr/bin/dircolors ]; then
     alias ls='ls --color=auto'
     #alias dir='dir --color=auto'
     #alias vdir='vdir --color=auto'
-
+    
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
@@ -112,7 +112,7 @@ parse_git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1 )/'
 }
 
-export PS1='\[\e[0;1;38;5;49m\]\w \[\e[91m\]$(parse_git_branch)\[\e[0;1;38;5;82m\]>> \[\e[00m\]'
+export PS1=' \[\e[0;1;38;5;49m\]\w \[\e[91m\]$(parse_git_branch)\[\e[0;1;38;5;82m\]>> \[\e[00m\]'
 
 # Alias definitions into a separate file: .aliases
 if [ -f ~/.aliases ]; then
