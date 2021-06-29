@@ -1,0 +1,31 @@
+#!/bin/bash
+
+# -lh long listing and human-readable
+alias lls='ls -lh'
+
+# -A do not list implied . and .. 
+alias la='ls -A'
+
+# -lhA long listing, human-readable and do not list implied . and ..
+alias lla='la -lh'
+
+# -i prompts before overwrite
+alias mv="mv -i"           
+
+# -p make parent directories as needed
+alias mkdir="mkdir -p"     
+
+# For easier navigation: 
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+
+# -v explain what is being done
+alias mv='mv -v'
+
+# -iv prompt before every removal and  explain what is being done
+alias rm='rm -i -v'
+
+# -v explain what is being done
+alias cp='cp -v'
