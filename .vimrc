@@ -189,11 +189,17 @@ map <leader>to :tabonly<cr>
 "               Colors
 "===========================================
 
-colorscheme sub_molo
+colorscheme sub_mono 
 "set background=dark
 "set termguicolors
+
 let g:monokai_term_italic = 1
 let g:monokai_gui_italic = 1
+
+"let g:materialmonokai_italic=1
+"let g:materialmonokai_subtle_spell=1
+"let g:materialmonokai_custom_lint_indicators=0
+
 
 " Enable colors in tmux: https://github.com/tmux/tmux/issues/1246
 " This is only necessary if you use set termguicolors.
@@ -257,7 +263,7 @@ let g:ctrlp_working_path_mode = 'ra'
 set noshowmode 
 
 let g:lightline = {
-      \ 'colorscheme': 'molokai',
+      \ 'colorscheme':'molokai', 
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]

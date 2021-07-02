@@ -105,34 +105,62 @@ font:
 # If `true`, bold text is drawn using the bright color variants.
 draw_bold_text_with_bright_colors: true
 
-# Colors (Monokai Dark)
 colors:
+# Colors (Monokai Dark)
+#  # Default colors
+#  primary:
+#    background: '#272822'
+#   foreground: '#F8F8F2'
+
+# # Normal colors
+# normal:
+#  black:   '#272822'
+#  red:     '#F92672'
+#  green:   '#A6E22E'
+#  yellow:  '#F4BF75'
+#  blue:    '#66D9EF'
+#  magenta: '#AE81FF'
+#  cyan:    '#A1EFE4'
+#  white:   '#F8F8F2'
+
+# # Bright colors
+# bright:
+#  black:   '#75715E'
+#  red:     '#F92672'
+#  green:   '#A6E22E'
+#  yellow:  '#F4BF75'
+#  blue:    '#66D9EF'
+#  magenta: '#AE81FF'
+#  cyan:    '#A1EFE4'
+#  white:   '#F9F8F5'
+
+# Material Desing
   # Default colors
   primary:
-    background: '#272822'
-    foreground: '#F8F8F2'
+    background: '#263238'
+    foreground: '#eceff1'
 
   # Normal colors
   normal:
-   black:   '#272822'
-   red:     '#F92672'
-   green:   '#A6E22E'
-   yellow:  '#F4BF75'
-   blue:    '#66D9EF'
-   magenta: '#AE81FF'
-   cyan:    '#A1EFE4'
-   white:   '#F8F8F2'
+   black:   '#35454d'
+   red:     '#FF5252'
+   green:   '#5CF19E'
+   yellow:  '#FFD740'
+   blue:    '#40C4FF'
+   magenta: '#FF4081'
+   cyan:    '#64FCDA'
+   white:   '#FFFFFF'
 
   # Bright colors
   bright:
-   black:   '#75715E'
-   red:     '#F92672'
-   green:   '#A6E22E'
-   yellow:  '#F4BF75'
-   blue:    '#66D9EF'
-   magenta: '#AE81FF'
-   cyan:    '#A1EFE4'
-   white:   '#F9F8F5'
+   black:   '#B0BEC5'
+   red:     '#FF8A80'
+   green:   '#B9F6CA'
+   yellow:  '#FFE57F'
+   blue:    '#80D8FF'
+   magenta: '#FF80AB'
+   cyan:    '#A7FDEB'
+   white:   '#FFFFFF'
 
   # Cursor colors
   #

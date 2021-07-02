@@ -29,3 +29,7 @@ alias rm='rm -i -v'
 
 # -v explain what is being done
 alias cp='cp -v'
+
+# Call python3 - Temporary
+alias py3='python3'
+
