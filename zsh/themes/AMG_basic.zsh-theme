@@ -1,8 +1,6 @@
-PROMPT=' ${return_status} %{$fg[blue]%}$(get_pwd)%{$reset_color%} $(git_prompt_info)${prompt_suffix}'
+PROMPT=' %{$fg_bold[green]%}$(get_pwd)%{$reset_color%} $(git_prompt_info)${prompt_suffix}'
 
-local return_status="%(?:%{$fg_bold[green]%}α:%{$fg_bold[red]%}α)"
-
-local prompt_suffix="%{$fg[magenta]%}❯%{$reset_color%} "
+local prompt_suffix="%(?:%{$fg_bold[green]%}❯:%{$fg_bold[red]❯) "
 
 # by shashankmehta (https://github.com/shashankmehta)
 function get_pwd(){
@@ -20,7 +18,7 @@ function get_pwd(){
   echo $prompt_short_dir
 }
 
-ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[green]%}"
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[blue]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%} "
-ZSH_THEME_GIT_PROMPT_DIRTY=" %{$fg[yellow]%}✗"
+ZSH_THEME_GIT_PROMPT_DIRTY=" %{$fg_bold[white]%}✗"
 ZSH_THEME_GIT_PROMPT_CLEAN=""

@@ -115,7 +115,7 @@ parse_git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 
-export PS1=' \[\e[0;1;38;5;49m\]\w\[\e[91m\]$(parse_git_branch)\[\e[0;1;38;5;82m\] >> \[\e[00m\]'
+export PS1=' \[\e[0;1;3;96m\]\u\[\e[0;1;3;96m\]@\[\e[0;1;3;96m\]\h \[\e[0;1;92m\]\w\[\e[0;1;97m\]$(parse_git_branch)\[\e[1;37m\] \[\e[0;1m\]> \[\e[0m\]'
 
 # Aliases definitions into a separate file: .aliases
 if [ -f ~/.aliases ]; then

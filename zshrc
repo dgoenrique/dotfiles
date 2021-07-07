@@ -5,7 +5,7 @@
 export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load 
-ZSH_THEME="alpha"
+ZSH_THEME="AMG_basic"
 
 # Use case-sensitive completion.
 # CASE_SENSITIVE="true"

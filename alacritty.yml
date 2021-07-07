@@ -135,33 +135,61 @@ colors:
 #  white:   '#F9F8F5'
 
 # Material Desing
+# # Default colors
+# primary:
+#   background: '#263238'
+#   foreground: '#eceff1'
+#
+# # Normal colors
+# normal:
+#  black:   '#35454d'
+#  red:     '#FF5252'
+#  green:   '#5CF19E'
+#  yellow:  '#FFD740'
+#  blue:    '#40C4FF'
+#  magenta: '#FF4081'
+#  cyan:    '#64FCDA'
+#  white:   '#FFFFFF'
+#
+# # Bright colors
+# bright:
+#  black:   '#B0BEC5'
+#  red:     '#FF8A80'
+#  green:   '#B9F6CA'
+#  yellow:  '#FFE57F'
+#  blue:    '#80D8FF'
+#  magenta: '#FF80AB'
+#  cyan:    '#A7FDEB'
+#  white:   '#FFFFFF'
+
+# Custom   
   # Default colors
   primary:
-    background: '#263238'
+    background: '#272822'
     foreground: '#eceff1'
 
   # Normal colors
   normal:
-   black:   '#35454d'
-   red:     '#FF5252'
-   green:   '#5CF19E'
-   yellow:  '#FFD740'
-   blue:    '#40C4FF'
-   magenta: '#FF4081'
-   cyan:    '#64FCDA'
+   black:   '#13191c'
+   red:     '#d40000'
+   green:   '#00ff71'
+   yellow:  '#ffcc0d'
+   blue:    '#30c0ff'
+   magenta: '#ff1766'
+   cyan:    '#00bfb3'
    white:   '#FFFFFF'
 
   # Bright colors
   bright:
-   black:   '#B0BEC5'
-   red:     '#FF8A80'
-   green:   '#B9F6CA'
-   yellow:  '#FFE57F'
-   blue:    '#80D8FF'
-   magenta: '#FF80AB'
-   cyan:    '#A7FDEB'
+   black:   '#505659'
+   red:     '#fa1414'
+   green:   '#42ff96'
+   yellow:  '#ffd22b'
+   blue:    '#63d0ff'
+   magenta: '#ff3b7e'
+   cyan:    '#00ebdc'
    white:   '#FFFFFF'
-
+  
   # Cursor colors
   #
   # Colors which should be used to draw the terminal cursor.
