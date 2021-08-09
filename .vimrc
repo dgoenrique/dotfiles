@@ -1,4 +1,5 @@
- set nocompatible "VI compatible mode is disabled so that VIm things work
+
+set nocompatible "VI compatible mode is disabled so that VIm things work
 
 "===========================================
 "           Syntax and indent
@@ -9,6 +10,10 @@
 
 " Shows matching brackets
 set showmatch
+
+" Auto indent pasted text
+nnoremap p p=`]<C-o>
+nnoremap P P=`]<C-o>
 
 " Enable file type detection
 filetype plugin indent on
@@ -51,6 +56,9 @@ set laststatus=2
 " Smart case-sensitive search
 set ignorecase
 set smartcase
+
+" Highlight searches by default
+set hlsearch        
 
 " Enable searching as you type, rather than waiting till you press enter.
 set incsearch

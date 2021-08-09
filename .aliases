@@ -30,3 +30,5 @@ alias rm='rm -i -v'
 # -v explain what is being done
 alias cp='cp -v'
 
+# Call python3 
+alias py3='python3'
