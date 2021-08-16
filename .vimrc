@@ -109,6 +109,10 @@ set splitright
 " Number of screen lines to show around the cursor
 set scrolloff=8
 
+" Substitute the word under the cursor.
+"https://github.com/jeremyckahn/dotfiles/blob/master/.vimrc
+nmap <leader>s :%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>
+
 
 "===========================================
 "            Keyboard shortcuts
@@ -120,10 +124,10 @@ set scrolloff=8
 
 " Movements in normal mode, insert mode, and visual mode (h/j/k/l)
 " " In normal mode...
- nnoremap <Left>  :echoe "Use h"<CR>
- nnoremap <Right> :echoe "Use l"<CR>
- nnoremap <Up>    :echoe "Use k"<CR>
- nnoremap <Down>  :echoe "Use j"<CR>
+nnoremap <Left>  :echoe "Use h"<CR>
+nnoremap <Right> :echoe "Use l"<CR>
+nnoremap <Up>    :echoe "Use k"<CR>
+nnoremap <Down>  :echoe "Use j"<CR>
 " " ...in insert mode...
 inoremap <Left>  <ESC>:echoe "Use h"<CR>
 inoremap <Right> <ESC>:echoe "Use l"<CR>
@@ -144,18 +148,6 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-" Decrease the size of current split
-nnoremap <silent> <C-Right> :resize -3<CR>
-
-" Increase the size of current split
-nnoremap <silent> <C-Left> :resize +3<CR>
-
-" Increase the current split width:
-nnoremap <silent> <C-Down> :vertical resize +3<CR>
-
-" Decrease the current split width:
-nnoremap <silent> <C-Up> :vertical resize -3<CR>
-
 " Maximize the current split:
 nnoremap <leader>m <C-W><C-_>
 
@@ -171,6 +163,23 @@ nnoremap <leader>h <C-w>s
 "Change 2 split windows from vertical to horizontal or horizontal to vertical
 map <leader>th <C-w>t<C-w>H
 map <leader>tk <C-w>t<C-w>K
+
+
+"""""""""""Have some issues in Tmux"""""""""""""""""
+
+" Decrease the size of current split
+nnoremap <silent> <C-Right> :resize -3<CR>
+
+" Increase the size of current split
+nnoremap <silent> <C-Left> :resize +3<CR>
+
+" Increase the current split width:
+nnoremap <silent> <C-Down> :vertical resize +3<CR>
+
+" Decrease the current split width:
+nnoremap <silent> <C-Up> :vertical resize -3<CR>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """""""""""""""""
 "  For Tabs
@@ -194,7 +203,7 @@ map <leader>to :tabonly<cr>
 
 
 "===========================================
-"               Colors
+"               Colors and Fonts
 "===========================================
 
 colorscheme sub_mono 
@@ -203,6 +212,9 @@ colorscheme sub_mono
 
 let g:monokai_term_italic = 1
 let g:monokai_gui_italic = 1
+
+"https://alexpearce.me/2014/05/italics-in-iterm2-vim-tmux/
+highlight Comment cterm=italic
 
 "let g:materialmonokai_italic=1
 "let g:materialmonokai_subtle_spell=1
@@ -241,8 +253,10 @@ endif
 call plug#begin()
     Plug 'ctrlpvim/ctrlp.vim'
     Plug 'itchyny/lightline.vim'
-    Plug 'itchyny/vim-gitbranch'
+    Plug 'tpope/vim-fugitive'
     Plug 'preservim/NERDTree'
+    Plug 'easymotion/vim-easymotion'
+    Plug 'mileszs/ack.vim'
 call plug#end()
 
 " Finally, start Vim and prompt vim-plug to install the plugins listed in
@@ -277,7 +291,7 @@ let g:lightline = {
       \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
       \ },
       \ 'component_function': {
-      \   'gitbranch': 'gitbranch#name',
+      \   'gitbranch': 'FugitiveHead',
       \   'filename': 'LightlineFilename'
       \ },
       \ }
@@ -294,4 +308,15 @@ endfunction
 " Map keys
 nnoremap <C-n> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
+
+
+"""""""""""""""""
+" vim-easymotion
+""""""""""""""""
+
+" Prefix
+map <Space> <Plug>(easymotion-prefix)
+
+" Turn on case-insensitive feature
+let g:EasyMotion_smartcase = 1
 
