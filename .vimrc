@@ -257,6 +257,7 @@ call plug#begin()
     Plug 'preservim/NERDTree'
     Plug 'easymotion/vim-easymotion'
     Plug 'mileszs/ack.vim'
+    Plug 'davidhalter/jedi-vim'
 call plug#end()
 
 " Finally, start Vim and prompt vim-plug to install the plugins listed in
@@ -319,4 +320,14 @@ map <Space> <Plug>(easymotion-prefix)
 
 " Turn on case-insensitive feature
 let g:EasyMotion_smartcase = 1
+
+
+
+"""""""""""""""""
+"  jedi-vim 
+"""""""""""""""""
+
+"jedi-vim use splits when going to a definition etc
+let g:jedi#use_splits_not_buffers = "left"
+
 
