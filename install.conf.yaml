@@ -1,0 +1,26 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- shell:
+    - sudo apt install zsh
+    - chsh -s $(which zsh)
+    - sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    - sudo apt install tmux
+
+- link:
+    ~/.tmux.conf: .tmux.conf
+    ~/.vim: .vim
+    ~/.vimrc: .vimrc
+    ~/.alacritty.yml: .alacritty.yml
+    ~/.aliases: .aliases
+    ~/.bashrc: .bashrc
+    ~/.zshrc: .zshrc
+    ~/.zsh/themes/AMG_basic.zsh-theme: zsh/themes/AMG_basic.zsh-theme
+
+    
+
+
+
