@@ -16,7 +16,7 @@
     ~/.zshrc: 
       force: true
       path: .zshrc
-    ~/.zsh/themes/AMG_basic.zsh-theme: zsh/themes/AMG_basic.zsh-theme
+    ~/.oh-my-zsh/custom/themes/AMG_basic.zsh-theme: zsh/themes/AMG_basic.zsh-theme
 
     
 
