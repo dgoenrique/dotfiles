@@ -4,6 +4,11 @@
 
 - clean: ['~']
 
+- shell:
+    - sudo apt install tmux -y
+    - sudo apt install zsh -y
+    - sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
 - link:
     ~/.tmux.conf: .tmux.conf
     ~/.vim: .vim
