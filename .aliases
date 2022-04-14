@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # -lh long listing and human-readable
-alias lls='ls -lh'
+alias lls="ls -lh"
 
 # -A do not list implied . and .. 
-alias la='ls -A'
+alias la="ls -A"
 
 # -lhA long listing, human-readable and do not list implied . and ..
-alias lla='la -lh'
+alias lla="la -lh"
 
 # -i prompts before overwrite
 alias mv="mv -i"           
@@ -22,13 +22,17 @@ alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
 # -v explain what is being done
-alias mv='mv -v'
+alias mv="mv -v"
 
 # -iv prompt before every removal and  explain what is being done
-alias rm='rm -i -v'
+alias rm="rm -i -v"
 
 # -v explain what is being done
-alias cp='cp -v'
+alias cp="cp -v"
 
 # Call python3 
-alias py3='python3'
+alias py3="python3"
+
+# git log - Visualizes history as a DAG
+alias gl="git log --all --graph --decorate"  
+

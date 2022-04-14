@@ -35,7 +35,4 @@ export LANG=en_US.UTF-8
 # export ARCHFLAGS="-arch x86_64"
 
 # # Aliases definitions into a separate file: .aliases
-if [ -f ~/.aliases ]; then
-    . ~/.aliases
-fi
-
+source $HOME/.aliases
