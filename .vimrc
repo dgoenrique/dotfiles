@@ -228,6 +228,7 @@ highlight Comment cterm=italic
   let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
   set termguicolors
 endif
+
 "===========================================
 "            Autocommands
 "===========================================
@@ -251,31 +252,24 @@ endif
 " outside of your ~/.vim directory)
 
 call plug#begin()
-    Plug 'ctrlpvim/ctrlp.vim'
     Plug 'itchyny/lightline.vim'
-    Plug 'tpope/vim-fugitive'
-    Plug 'preservim/NERDTree'
-    Plug 'easymotion/vim-easymotion'
-    Plug 'mileszs/ack.vim'
 call plug#end()
 
 " Finally, start Vim and prompt vim-plug to install the plugins listed in
 "  ~/.vimrc:
 " :PlugInstall
 
-" For clean uninstall :PlugClean"
+" For clean uninstall, remove the name between the plug#begin() and plug#end()
+" and run:
+" :PlugClean"
 
-"""""""""""""""""
-"   CrtlP
-"""""""""""""""""
-
-" Change the default mapping and the default command to invoke CtrlP:
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
-
-" When invoked without an explicit starting directory, CtrlP will set its local
-"working directory
-let g:ctrlp_working_path_mode = 'ra'
+" Others plugins to install:
+" Plug 'preservim/NERDTree'
+" Plug 'easymotion/vim-easymotion'
+" Plug 'mileszs/ack.vim'
+" Plug 'ctrlpvim/ctrlp.vim'
+" Plug 'tpope/vim-fugitive'
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 """""""""""""""""
 "  lightline
@@ -299,25 +293,5 @@ let g:lightline = {
 function! LightlineFilename()
       return expand('%:t') !=# '' ? @% : '[No Name]'
 endfunction
-
-
-"""""""""""""""""
-"  NERDTree
-"""""""""""""""""
-
-" Map keys
-nnoremap <C-n> :NERDTreeToggle<CR>
-nnoremap <C-f> :NERDTreeFind<CR>
-
-
-"""""""""""""""""
-" vim-easymotion
-""""""""""""""""
-
-" Prefix
-map <Space> <Plug>(easymotion-prefix)
-
-" Turn on case-insensitive feature
-let g:EasyMotion_smartcase = 1
 
 

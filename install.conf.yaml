@@ -18,7 +18,6 @@
     ~/.tmux.conf: .tmux.conf
     ~/.vim: .vim
     ~/.vimrc: .vimrc
-    ~/.alacritty.yml: .alacritty.yml
     ~/.aliases: .aliases
     ~/.bashrc: 
       path: .bashrc
