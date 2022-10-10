@@ -4,16 +4,28 @@
 
 - clean: ['~']
 
+# For Arch based distros:
 - shell:
-    #- sudo pacman -S --needed git base-devel yay
+    #- yes | sudo pacman -S --needed git base-devel yay
+    #- yes | sudo pacman -S tmux 
+    #- yes | sudo pacman -S zsh 
+    #- yes | sudo pacman -S flameshot
+    #- sudo pacman-mirrors -c Brazil
+    #- sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    
+# For Debian based distros:
+- shell:
     - sudo apt install tmux -y
-    #- sudo pacman -S tmux 
     - sudo apt install zsh -y
-    #- sudo pacman -S zsh 
     - sudo apt install flameshot -y
-    #- sudo pacman -S flameshot
     - sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
+# Instaling other things
+- shell:
+    - git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+    - git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions 
+
+# Creating links:
 - link:
     ~/.tmux.conf: .tmux.conf
     ~/.vim: .vim
@@ -27,6 +39,3 @@
       path: .zshrc
     ~/.oh-my-zsh/custom/themes/AMG_basic.zsh-theme: zsh/themes/AMG_basic.zsh-theme
 
-- shell:
-    - git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-    - git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions 
