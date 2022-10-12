@@ -34,4 +34,5 @@
       force: true
       path: .zshrc
     ~/.oh-my-zsh/custom/themes/AMG_basic.zsh-theme: zsh/themes/AMG_basic.zsh-theme
+    ~/.config/nvim: nvim
 

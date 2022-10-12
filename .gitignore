@@ -1,7 +1,5 @@
 .vim/plugged
 
-plugin/
-
 .vim/undodir/
 
 nvim/.netrwhist
