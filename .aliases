@@ -33,6 +33,8 @@ alias cp="cp -v"
 # Call python3 
 alias py3="python3"
 
-# git log - Visualizes history as a DAG
+# Git log - Visualizes history as a DAG
 alias gl="git log --all --graph --decorate"  
 
+# Call nvim like vim
+#alias vim="nvim"

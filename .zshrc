@@ -34,5 +34,15 @@ export LANG=en_US.UTF-8
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-# # Aliases definitions into a separate file: .aliases
+# Aliases definitions into a separate file: .aliases
 source $HOME/.aliases
+
+# Managing multiple language runtime versions on a per-project basis with asdf
+# (https://asdf-vm.com/)
+. $HOME/.asdf/asdf.sh
+
+# append completions to fpath (asdf)
+fpath=(${ASDF_DIR}/completions $fpath)
+
+# initialise completions with ZSH's compinit (asdf)
+autoload -Uz compinit && compinit

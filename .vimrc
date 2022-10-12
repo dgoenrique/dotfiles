@@ -30,6 +30,9 @@ filetype plugin indent on
 "       Basic editing config
 "===========================================
 
+" Changing the cursor in insert mode
+set guicursor=""
+
 " Use 4 spaces instead of tabs during formatting
 set expandtab " swap tabs out for spaces
 "set smarttab
@@ -264,11 +267,8 @@ call plug#end()
 " :PlugClean"
 
 " Others plugins to install:
-" Plug 'preservim/NERDTree'
-" Plug 'easymotion/vim-easymotion'
-" Plug 'mileszs/ack.vim'
+" Plug 'preservim/NERDTree' --> Look this: https://github.com/preservim/nerdtree/issues/1280
 " Plug 'ctrlpvim/ctrlp.vim'
-" Plug 'tpope/vim-fugitive'
 " Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 """""""""""""""""
