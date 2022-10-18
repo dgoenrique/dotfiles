@@ -18,3 +18,6 @@ nnoremap("<leader>lm", "<cmd>lua require('telescope.builtin').marks()<cr>")
 
 -- Lists available help tags and opens a new window with the relevant help info on <cr>
 nnoremap("<leader>lm", "<cmd>lua require('telescope.builtin').help_tags()<cr>")
+
+-- Lists Diagnostics for current buffer.
+nnoremap("<leader>ld", "<cmd>lua require('telescope.builtin').diagnostics()<cr>")
