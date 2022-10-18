@@ -78,6 +78,12 @@ return require('packer').startup(function(use)
     -- Quickstart configs for Nvim LSP
     use 'neovim/nvim-lspconfig'
 
+    -- autopairs for neovim written by lua
+    use 'windwp/nvim-autopairs'
+
+    -- Git integration for buffers 
+    use 'lewis6991/gitsigns.nvim'
+
     -- Automatically set up your configuration after cloning packer.nvim
     if PACKER_BOOTSTRAP then
         require("packer").sync()
