@@ -1,32 +1,85 @@
+-- Autocommand that reloads neovim whenever you save the packer.lua file
+vim.cmd([[
+  augroup packer_user_config
+  autocmd!
+  autocmd BufWritePost packer.lua source <afile> | PackerSync
+  augroup end
+]])
+
+-- Use a protected call so we don't error out on first use
+local status_ok, packer = pcall(require, "packer")
+if not status_ok then
+    return
+end
+
+-- Have packer use a popup window
+packer.init({
+    display = {
+        open_fn = function()
+            return require("packer.util").float({ border = "rounded" })
+        end,
+    },
+})
+
 return require('packer').startup(function(use)
-  -- Packer can manage itself
-  use 'wbthomason/packer.nvim'
-  
-  --  TokyoNight theme
-  use 'folke/tokyonight.nvim'
+    -- Packer can manage itself
+    use 'wbthomason/packer.nvim'
 
-  -- Extensible Neovim Scrollbar
-  use 'petertriho/nvim-scrollbar'
-  
-  --  Highly extendable fuzzy finder over lists
-  use {
-  'nvim-telescope/telescope.nvim', tag = '0.1.0',
-  requires = { {'nvim-lua/plenary.nvim'} }
-  }
+    --  TokyoNight theme
+    use 'folke/tokyonight.nvim'
 
-  use "nvim-lua/plenary.nvim"
+    -- Extensible Neovim Scrollbar
+    use 'petertriho/nvim-scrollbar'
 
-  use {
-      'nvim-treesitter/nvim-treesitter',
-      run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
-  }
+    --  Highly extendable fuzzy finder over lists
+    use {
+        'nvim-telescope/telescope.nvim', tag = '0.1.0',
+        requires = { {'nvim-lua/plenary.nvim'} }
+    }
 
-  -- Like NERDTree >> Needs more configuration for better visual
-  use {
-     'nvim-tree/nvim-tree.lua',
-  }
- 
-  -- Language Server Client with COC >> Why not??
-  use {'neoclide/coc.nvim', branch = 'release'}
+    -- Useful lua functions used by lots of plugins
+    use "nvim-lua/plenary.nvim"
 
+    -- Treesitter
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
+    }
+
+    -- Rainbow parentheses for neovim using tree-sitter
+    use 'p00f/nvim-ts-rainbow'
+
+    -- Like NERDTree >> Needs more configuration for better visual
+    use {
+        'nvim-tree/nvim-tree.lua',
+    }
+
+    -- The completion plugin
+    use 'hrsh7th/nvim-cmp'
+
+    -- nvim-cmp source for neovim's built-in language server client.
+    use 'hrsh7th/cmp-nvim-lsp'
+
+    -- nvim-cmp source for filesystem paths.
+    use 'hrsh7th/cmp-path'
+
+    -- buffer completions
+    use 'hrsh7th/cmp-buffer'
+
+    -- snippet completions
+    use 'saadparwaiz1/cmp_luasnip'
+
+    --snippet engine
+    use "L3MON4D3/LuaSnip"
+
+    -- a bunch of snippets to use
+    use "rafamadriz/friendly-snippets"
+
+    -- Quickstart configs for Nvim LSP
+    use 'neovim/nvim-lspconfig'
+
+    -- Automatically set up your configuration after cloning packer.nvim
+    if PACKER_BOOTSTRAP then
+        require("packer").sync()
+    end
 end)

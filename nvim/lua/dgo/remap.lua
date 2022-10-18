@@ -72,10 +72,13 @@ vim.keymap.set("n","<leader>to",":tabonly<cr>")
 
 
 -- Automatically closing: 
---inoremap ( ()<Esc>i
---"inoremap { {}<Esc>i
-vim.keymap.set("i","{<CR>","{<CR>}<Esc>O")
---"inoremap [ []<Esc>i
---inoremap < <><Esc>i
---inoremap ' ''<Esc>i
---inoremap " ""<Esc>i
+--vim.keymap.set("i","{<CR>","{<CR>}<Esc>O")
+--vim.keymap.set("i","(<CR>","(<CR>)<Esc>O")
+--vim.keymap.set("i","[<CR]","[<CR>]<Esc>O")
+--vim.keymap.set("i","{<CR}","{<CR>}<Esc>O")
+--vim.keymap.set("i","{","{}<Esc>i")
+--vim.keymap.set("i","(","()<Esc>i")
+--vim.keymap.set("i","[","[]<Esc>i")
+--vim.keymap.set("i","\"","\"\"<Esc>i")
+--vim.keymap.set("i","<","<><Esc>i")
+--vim.keymap.set("i","'","''<Esc>i")
