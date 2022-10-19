@@ -19,3 +19,15 @@ require'lspconfig'.clangd.setup{
     capabilities = capabilities,
     on_attach = on_attach
 }
+
+-- For ruby
+require'lspconfig'.solargraph.setup{
+    capabilities = capabilities,
+    on_attach = on_attach
+}
+
+-- For python 
+require'lspconfig'.pylsp.setup{
+    capabilities = capabilities,
+    on_attach = on_attach
+}
