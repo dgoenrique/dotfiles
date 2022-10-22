@@ -53,6 +53,9 @@ vim.opt.ruler = true
 
 -- Helper to keep lines under 80 characters
 vim.opt.colorcolumn = "80"
+vim.cmd[[let w:m1=matchadd('ErrorMsg', '\%>80v.\+', -1)]]
+vim.cmd[[set textwidth=100 ]] -- max-width in line 100 
+vim.cmd[[set lbr ]] -- linebreak
 
 -- Column used for sings
 vim.opt.signcolumn = "yes"
