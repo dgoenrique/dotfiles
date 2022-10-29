@@ -84,6 +84,9 @@ return require('packer').startup(function(use)
     -- Git integration for buffers 
     use 'lewis6991/gitsigns.nvim'
 
+    --  Easily manage multiple terminal windows
+    use 'akinsho/toggleterm.nvim'
+
     -- Automatically set up your configuration after cloning packer.nvim
     if PACKER_BOOTSTRAP then
         require("packer").sync()

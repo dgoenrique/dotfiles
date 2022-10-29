@@ -33,7 +33,7 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
 -- Dont highlight searches by default
-vim.opt.hlsearch = false 
+vim.opt.hlsearch = true 
 
 -- Enable searching as you type, rather than waiting till you press enter.
 vim.opt.incsearch = true
@@ -96,3 +96,4 @@ vim.cmd([[:set hidden]])
 --   If we try to exiting vim, when 'hidden' is enabled, we are going to see
 --   two message errors (E67, E162) specifying that we are not allowing to exit
 --   from Vim, until we save or discard changes from the mentioned buffer.
+
