@@ -6,20 +6,24 @@
 
 - shell:
 # For Arch based distros:
-    #- yes | sudo pacman -S --needed git base-devel yay
-    #- yes | sudo pacman -S tmux 
-    #- yes | sudo pacman -S zsh 
-    #- yes | sudo pacman -S flameshot
     #- sudo pacman-mirrors -c Brazil
+    #- echo y | sudo pacman -S --needed git base-devel yay
+    #- echo y | sudo pacman -S tmux 
+    #- echo y | sudo pacman -S zsh 
+    #- echo y | sudo pacman -S flameshot
+    #- sudo pacman -S neovim
+    #- sudo pacman -S python-pynvim 
 # For Debian based distros:
     - sudo apt install tmux -y
     - sudo apt install zsh -y
     - sudo apt install flameshot -y
+    - sudo apt-get install neovim python3-neovim
 # Instaling other things
     - sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
     - git clone https://github.com/asdf-vm/asdf.git ~/.asdf
     - git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
     - git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions 
+    - git clone --depth 1 https://github.com/wbthomason/packer.nvim\ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 
 # Creating links:
 - link:
