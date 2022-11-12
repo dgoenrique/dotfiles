@@ -17,7 +17,8 @@
     - sudo apt install tmux -y
     - sudo apt install zsh -y
     - sudo apt install flameshot -y
-    - sudo apt-get install neovim python3-neovim
+    - sudo apt install neovim -y 
+    - sudo apt install python3-neovim
 # Instaling other things
     - sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
     - git clone https://github.com/asdf-vm/asdf.git ~/.asdf
