@@ -7,17 +7,14 @@
 - shell:
 # For Arch based distros:
     #- sudo pacman-mirrors -c Brazil
-    #- echo y | sudo pacman -S --needed git base-devel yay
     #- echo y | sudo pacman -S tmux 
     #- echo y | sudo pacman -S zsh 
     #- echo y | sudo pacman -S flameshot
-    #- sudo pacman -S python-pynvim 
 # For Debian based distros:
-    - sudo apt install build-essential
+    - sudo apt install build-essential -y
     - sudo apt install tmux -y
     - sudo apt install zsh -y
     - sudo apt install flameshot -y
-    - sudo apt install python3-neovim -y
 # Instaling other things
     - sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
     - git clone https://github.com/asdf-vm/asdf.git ~/.asdf

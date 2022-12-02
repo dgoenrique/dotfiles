@@ -105,6 +105,12 @@ return require('packer').startup(function(use)
     --  Easily manage multiple terminal windows
     use 'akinsho/toggleterm.nvim'
 
+    -- Markdown preview plugin for neovim
+    use({
+    "iamcco/markdown-preview.nvim",
+    run = function() vim.fn["mkdp#util#install"]() end,
+    })
+
     -- Automatically set up your configuration after cloning packer.nvim
     if PACKER_BOOTSTRAP then
         require("packer").sync()
